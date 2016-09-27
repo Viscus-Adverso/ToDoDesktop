@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <HBox prefHeight="22.0" prefWidth="600.0" VBox.vgrow="NEVER">
          <children>
-            <TextField HBox.hgrow="ALWAYS" />
-            <Button minWidth="-Infinity" mnemonicParsing="false" text="Add" />
-            <Button minWidth="-Infinity" mnemonicParsing="false" text="Remove" />
-            <Button minWidth="-Infinity" mnemonicParsing="false" text="Toggle" />
+            <TextField fx:id="text" HBox.hgrow="ALWAYS" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#addItem" text="Add" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#removeItem" text="Remove" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#toggleItem" text="Toggle" />
          </children>
       </HBox>
-      <ListView VBox.vgrow="ALWAYS" />
+      <ListView fx:id="list" VBox.vgrow="ALWAYS" />
    </children>
 </VBox>
